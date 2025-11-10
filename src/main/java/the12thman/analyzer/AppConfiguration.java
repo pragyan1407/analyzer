@@ -24,7 +24,8 @@ public class AppConfiguration {
 
     @Bean
 public ChatLanguageModel chatLanguageModel(){
-        String apiKey = "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";
+        //provide your own api key or put it in properties file or configure via cmdb property
+        String apiKey = "";
 
         return OpenAiChatModel.builder().baseUrl("https://openrouter.ai/api/v1").apiKey(apiKey).modelName("qwen/qwen3-coder:free").build();
     }
